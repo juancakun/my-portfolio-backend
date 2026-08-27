@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import portfolio.model.Education;
-import portfolio.repository.IEducationsRepository;
+import portfolio.service.IEducationService;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,16 +16,16 @@ import java.util.Optional;
 @AllArgsConstructor
 public class EducationTestController {
 
-    private final IEducationsRepository educationsRepository;
+    private final IEducationService educationService;
 
     @GetMapping("/all")
     public List<Education> findAllEducations() {
-        return educationsRepository.findAll();
+        return educationService.findAll();
     }
 
     @GetMapping("/{id}")
     public Education findEducationById(@PathVariable Long id) {
-        Optional<Education> education = educationsRepository.findById(id);
+        Optional<Education> education = educationService.findById(id);
         if (education.isPresent()) {
             return education.get();
         }else  {
@@ -35,7 +35,7 @@ public class EducationTestController {
 
     @PostMapping
     public ResponseEntity<Education> createEducation(@RequestBody Education education) {
-        Education saveEducation = educationsRepository.save(education);
+        Education saveEducation = educationService.save(education);
         return new ResponseEntity<>(saveEducation, HttpStatus.CREATED);
     }
 

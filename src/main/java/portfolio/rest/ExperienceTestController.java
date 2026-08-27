@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import portfolio.model.Experience;
-import portfolio.repository.IExperiencesRepository;
+import portfolio.service.IExperienceService;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,16 +16,16 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ExperienceTestController {
 
-    private final IExperiencesRepository experiencesRepository;
+    private final IExperienceService experienceService;
 
     @GetMapping("/all")
     public List<Experience> findAllExperiences() {
-        return experiencesRepository.findAll();
+        return experienceService.findAll();
     }
 
     @GetMapping("/{id}")
     public Experience findExperienceById(@PathVariable Long id) {
-        Optional<Experience> experience = experiencesRepository.findById(id);
+        Optional<Experience> experience = experienceService.findById(id);
         if (experience.isPresent()) {
             return experience.get();
         }else{
@@ -35,7 +35,7 @@ public class ExperienceTestController {
 
     @PostMapping
     public ResponseEntity<Experience> createExperience(@RequestBody Experience experience) {
-        Experience savedExperience = experiencesRepository.save(experience);
+        Experience savedExperience = experienceService.save(experience);
         return new ResponseEntity<>(savedExperience, HttpStatus.CREATED);
     }
 

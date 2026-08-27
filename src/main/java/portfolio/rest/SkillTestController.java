@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import portfolio.model.Skill;
-import portfolio.repository.ISkillRepository;
+import portfolio.service.ISkillService;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,16 +16,16 @@ import java.util.Optional;
 @AllArgsConstructor
 public class SkillTestController {
 
-    private final ISkillRepository skillRepository;
+    private final ISkillService skillService;
 
     @GetMapping("/all")
     public List<Skill> allSkills() {
-        return skillRepository.findAll();
+        return skillService.findAll();
     }
 
     @GetMapping("/{id}")
     public Skill findById(@PathVariable Long id) {
-        Optional<Skill> skill = skillRepository.findById(id);
+        Optional<Skill> skill = skillService.findById(id);
         if (skill.isPresent()) {
             return skill.get();
         }else{
@@ -35,7 +35,7 @@ public class SkillTestController {
 
     @PostMapping
     public ResponseEntity<Skill> createSkill(@RequestBody Skill skill) {
-        Skill savedSkill = skillRepository.save(skill);
+        Skill savedSkill = skillService.save(skill);
         return new ResponseEntity<>(savedSkill, HttpStatus.CREATED);
     }
 }
