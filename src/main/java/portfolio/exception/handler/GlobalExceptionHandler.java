@@ -1,4 +1,4 @@
-package portfolio.exception.hangler;
+package portfolio.exception.handler;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
