@@ -14,8 +14,8 @@ VALUES (
            'Juan Carlos',
            'Hernández Montero',
            'Ingeniero en Sistemas Computacionales',
-           'Ingeniero en Sistemas Computacionales orientado al desarrollo de software y backend, con experiencia académica y en proyectos personales utilizando Java, Spring Boot, Python, SQL y tecnologías web. He desarrollado aplicaciones REST, sistemas con bases de datos, aplicaciones móviles y soluciones distribuidas, trabajando con herramientas como Git, Maven y AWS. Actualmente busco iniciar mi experiencia profesional en desarrollo de software, especialmente en posiciones relacionadas con Java, Spring Boot y desarrollo backend.',
-           NULL,
+           'Desarrollador en formación, apasionado por Java y el desarrollo de software.',
+           'img/JuanCarlos.png',
            0,
            'juancarlos.hdz.montero@gmail.com',
            '5624524910',
@@ -30,23 +30,19 @@ INSERT INTO skills (
     personal_info_id
 )
 VALUES
-    ('Java', 90, 'fab fa-java', 1),
-    ('Spring Boot', 85, 'fas fa-leaf', 1),
-    ('SQL', 85, 'fas fa-database', 1),
-    ('PostgreSQL', 80, 'fas fa-database', 1),
-    ('MySQL', 80, 'fas fa-database', 1),
-    ('SQL Server', 75, 'fas fa-database', 1),
-    ('Python', 75, 'fab fa-python', 1),
-    ('C/C++', 65, 'fas fa-code', 1),
-    ('HTML', 85, 'fab fa-html5', 1),
-    ('CSS', 80, 'fab fa-css3-alt', 1),
-    ('JavaScript', 70, 'fab fa-js-square', 1),
-    ('React Native', 75, 'fab fa-react', 1),
-    ('Expo', 70, 'fas fa-mobile-alt', 1),
-    ('Git', 85, 'fab fa-git-alt', 1),
-    ('GitHub', 85, 'fab fa-github', 1),
-    ('Maven', 80, 'fas fa-box', 1),
-    ('AWS', 65, 'fab fa-aws', 1);
+    ('Java', 90, 'img/logos/java.png', 1),
+    ('Spring Boot', 85, 'img/logos/spring-boot.png', 1),
+    ('PostgreSQL', 80, 'img/logos/postgre-sql.png', 1),
+    ('MySQL', 80, 'img/logos/mysql.png', 1),
+    ('SQL Server', 75, 'img/logos/servidor-sql.png', 1),
+    ('C/C++', 65, 'img/logos/logotipo-de-c-.png', 1),
+    ('HTML5', 85, 'img/logos/html-5.png', 1),
+    ('CSS3', 80, 'img/logos/css-3.png', 1),
+    ('JavaScript', 70, 'img/logos/js.png', 1),
+    ('React Native', 75, 'img/logos/react-js.png', 1),
+    ('Expo', 70, 'img/logos/expo.png', 1),
+    ('Git', 85, 'img/logos/git.png', 1),
+    ('AWS', 50, 'img/logos/aws.png', 1);
 
 INSERT INTO educations (
     degree,

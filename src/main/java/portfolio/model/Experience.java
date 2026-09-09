@@ -21,10 +21,14 @@ public class Experience {
     @NotNull(message = "La fecha de inicio es obligatoria.")
     @PastOrPresent(message = "La fecha de inicio no puede ser futura.")
     private LocalDate startDate;
-    @NotNull(message = "La fecha de termino es obligatoria.")
     @PastOrPresent(message = "La fecha de termino no puede ser futura.")
     private LocalDate endDate;
     @NotBlank(message = "La descripción es obligatoria.")
     private String description;
     private Long personalInfoId;
+
+    public String getFormattedEndDate() {
+        return (this.endDate != null) ? this.endDate.toString() : "Presente";
+    }
+
 }

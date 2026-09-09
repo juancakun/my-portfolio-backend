@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Experience</title>
+</head>
+<body>
+
+    <section id="experience" th:fragment="experience">
+        <h2>MI EXPERIENCIA</h2>
+        <div class="experience-timeline" th:each="experience : ${experienceList}">
+            <div class="timeline-item">
+                <h3 th:text="${experience.jobTitle}"></h3>
+                <p th:text="${experience.companyName}"></p>
+                <p class="timeline-date" th:text="${experience.startDate} + ' - ' + ${experience.formattedEndDate}"></p>
+                <p th:text="${experience.description}"></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
