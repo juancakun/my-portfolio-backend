@@ -61,43 +61,52 @@ VALUES (
            1
        );
 
-INSERT INTO experiences (
-    job_title,
-    company_name,
-    start_date,
-    end_date,
+-- INSERT INTO experiences (
+--     job_title,
+--     company_name,
+--     start_date,
+--     end_date,
+--     description,
+--     personal_info_id
+-- )
+-- VALUES
+--        (
+--
+--        );
+
+INSERT INTO projects(
+    title,
     description,
+    image_url,
+    project_url,
     personal_info_id
 )
-VALUES (
-           'Desarrollador Full Stack',
-           'ProfeAsis - Proyecto académico',
-           '2024-01-01',
-           '2025-01-01',
-           'Desarrollo de una aplicación móvil para docentes de educación básica utilizando React Native y Expo. Implementación de registro de asistencia, gestión de alumnos, periodos, actividades y calificaciones, generación de reportes y códigos QR. Utilización de SQLite para almacenamiento local y desarrollo de una arquitectura basada en contextos y servicios.',
-           1
-       ),
-       (
-           'Desarrollador Backend',
-           'ZonaFitSpring - Proyecto personal',
-           '2026-01-01',
-           '2026-06-01',
-           'Desarrollo de una aplicación web backend utilizando Java y Spring Boot. Implementación de operaciones CRUD, integración con bases de datos MySQL, manejo de entidades, repositorios y persistencia de información. Uso de Maven para la gestión del proyecto y Git para control de versiones.',
-           1
-       ),
-       (
-           'Desarrollador Java',
-           'Sistema distribuido de procesamiento de archivos - Proyecto académico',
-           '2024-01-01',
-           '2024-06-01',
-           'Desarrollo de un sistema distribuido en Java compuesto por un servidor coordinador y tres servidores trabajadores. El servidor principal distribuía equitativamente los archivos entre los servidores disponibles, que procesaban el contenido de manera concurrente para localizar palíndromos relacionados con una palabra proporcionada por el usuario. Implementación de concurrencia, comunicación entre servidores, sincronización mediante semáforos y consolidación de resultados.',
-           1
-       ),
-       (
-           'Desarrollador Backend',
-           'My Portfolio Backend - Proyecto personal',
-           '2026-08-01',
-           NULL,
-           'Desarrollo de un backend para portafolio profesional utilizando Java, Spring Boot y PostgreSQL. Implementación de persistencia mediante Spring Data JDBC, configuración de conexión con una base de datos PostgreSQL alojada en Neon y diseño de estructuras para información personal, habilidades, educación y proyectos profesionales.',
-           1
-       );
+VALUES
+    (
+        'Desarrollador Full Stack - ProfeAsis - Proyecto académico',
+        'Desarrollo de una aplicación móvil para docentes de educación básica utilizando React Native y Expo. Implementación de registro de asistencia, gestión de alumnos, periodos, actividades y calificaciones, generación de reportes y códigos QR. Utilización de SQLite para almacenamiento local y desarrollo de una arquitectura basada en contextos y servicios.',
+        'img/projects/ProfeAsis.jpeg',
+       'https://www.youtube.com/@Profeasis',
+        1
+    ),
+    (
+        'Desarrollador Backend - ZonaFitSpring - Proyecto personal',
+        'Desarrollo de una aplicación web backend utilizando Java y Spring Boot. Implementación de operaciones CRUD, integración con bases de datos MySQL, manejo de entidades, repositorios y persistencia de información. Uso de Maven para la gestión del proyecto y Git para control de versiones.',
+        'img/projects/ZonaFitSpring.png',
+        'https://github.com/juancakun/ZonaFitSpring',
+        1
+    ),
+    (
+        'Desarrollador Java - Sistema distribuido de procesamiento de archivos - Proyecto académico',
+        'Desarrollo de un sistema distribuido en Java compuesto por un servidor coordinador y tres servidores trabajadores. El servidor principal distribuía equitativamente los archivos entre los servidores disponibles, que procesaban el contenido de manera concurrente para localizar palíndromos relacionados con una palabra proporcionada por el usuario. Implementación de concurrencia, comunicación entre servidores, sincronización mediante semáforos y consolidación de resultados.',
+        'img/projects/tareas.jpg',
+        NULL,
+        1
+    ),
+    (
+        'Desarrollador Backend - My Portfolio Backend - Proyecto personal',
+        'Desarrollo de un backend para portafolio profesional utilizando Java, Spring Boot y PostgreSQL. Implementación de persistencia mediante Spring Data JDBC, configuración de conexión con una base de datos PostgreSQL alojada en Neon y diseño de estructuras para información personal, habilidades, educación y proyectos profesionales.',
+        'img/projects/my-portfolio-backed.png',
+        NULL,
+        1
+    );
