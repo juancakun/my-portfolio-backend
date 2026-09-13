@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <nav th:insert="fragments/nav :: nav"></nav>
-            <nav th:insert="sections/personal-info-section :: hero"></nav>
+            <nav th:insert="~{fragments/nav :: nav}"></nav>
+            <nav th:insert="~{sections/personal-info-section :: hero}"></nav>
         </div>
     </header>
 
@@ -22,6 +22,7 @@
             <div th:replace="~{sections/skills-section :: skills}"></div>
             <div th:replace="~{sections/education-section :: education}"></div>
             <div th:replace="~{sections/experience-section :: experience}"></div>
+            <div th:replace="~{sections/project-section :: projects}"></div>
             <div th:replace="~{sections/contact-section :: contact}"></div>
         </div>
     </main>

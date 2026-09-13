@@ -13,17 +13,12 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Experience {
+
     private Long id;
-    @NotBlank(message = "El Nombre del trabajo es obligatorio.")
     private String jobTitle;
-    @NotBlank(message = "El nombre de la compañia es obligatorio.")
     private String companyName;
-    @NotNull(message = "La fecha de inicio es obligatoria.")
-    @PastOrPresent(message = "La fecha de inicio no puede ser futura.")
     private LocalDate startDate;
-    @PastOrPresent(message = "La fecha de termino no puede ser futura.")
     private LocalDate endDate;
-    @NotBlank(message = "La descripción es obligatoria.")
     private String description;
     private Long personalInfoId;
 
