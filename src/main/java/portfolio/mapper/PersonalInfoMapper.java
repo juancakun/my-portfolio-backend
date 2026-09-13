@@ -1,5 +1,6 @@
-package portfolio.dto;
+package portfolio.mapper;
 
+import portfolio.dto.PersonalInfoDto;
 import portfolio.model.PersonalInfo;
 
 public class PersonalInfoMapper {

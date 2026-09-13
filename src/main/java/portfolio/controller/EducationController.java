@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import portfolio.dto.EducationDto;
-import portfolio.dto.EducationMapper;
+import portfolio.mapper.EducationMapper;
 import portfolio.model.Education;
 import portfolio.service.IEducationService;
 
@@ -53,7 +53,7 @@ public class EducationController {
         try {
             Education education = EducationMapper.toEntity(educationDto);
             educationService.save(education);
-            redirectAttributes.addFlashAttribute("message", "Educación guardada con éxito en Mar del Plata!");
+            redirectAttributes.addFlashAttribute("message", "Educación guardada");
             return "redirect:/education";
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", "Error al guardar la educación: " + e.getMessage());
@@ -79,7 +79,7 @@ public class EducationController {
                                   RedirectAttributes redirectAttributes) {
         try {
             educationService.deleteById(id);
-            redirectAttributes.addFlashAttribute("message", "Educación eliminada con éxito de tu portfolio en Mar del Plata!");
+            redirectAttributes.addFlashAttribute("message", "Educación eliminada con éxito de tu portfolio");
             return "redirect:/education";
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", "Error al eliminar la educación: " + e.getMessage());

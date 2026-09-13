@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import portfolio.dto.SkillDto;
-import portfolio.dto.SkillMapper;
+import portfolio.mapper.SkillMapper;
 import portfolio.model.Skill;
 import portfolio.service.ISkillService;
 

@@ -1,5 +1,6 @@
-package portfolio.dto;
+package portfolio.mapper;
 
+import portfolio.dto.EducationDto;
 import portfolio.model.Education;
 
 public class EducationMapper {

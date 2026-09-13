@@ -1,5 +1,6 @@
-package portfolio.dto;
+package portfolio.mapper;
 
+import portfolio.dto.SkillDto;
 import portfolio.model.Skill;
 
 public class SkillMapper {

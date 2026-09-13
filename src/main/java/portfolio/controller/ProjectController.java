@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import portfolio.dto.ProjectDto;
-import portfolio.dto.ProjectMapper;
+import portfolio.mapper.ProjectMapper;
 import portfolio.model.Project;
 import portfolio.service.FileStorageService;
 import portfolio.service.IProjectService;

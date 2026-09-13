@@ -1,5 +1,6 @@
-package portfolio.dto;
+package portfolio.mapper;
 
+import portfolio.dto.ProjectDto;
 import portfolio.model.Project;
 
 public class ProjectMapper {

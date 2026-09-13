@@ -1,5 +1,6 @@
-package portfolio.dto;
+package portfolio.mapper;
 
+import portfolio.dto.ExperienceDto;
 import portfolio.model.Experience;
 
 public class ExperienceMapper {

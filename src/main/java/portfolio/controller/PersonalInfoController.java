@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import portfolio.dto.PersonalInfoDto;
-import portfolio.dto.PersonalInfoMapper;
+import portfolio.mapper.PersonalInfoMapper;
 import portfolio.model.PersonalInfo;
 import portfolio.service.IPersonalInfoService;
 
@@ -36,14 +36,14 @@ public class PersonalInfoController {
         if (personalInfoOptional.isPresent()) {
             PersonalInfoDto personalInfoDto = PersonalInfoMapper.toDto(personalInfoOptional.get());
             model.addAttribute("personalInfoDto", personalInfoDto);
-            return "personalinfo/form-personal-info";
+            return "personal-info/form-personal-info";
         } else {
             // Si no se encuentra, se podría ofrecer crear una nueva o mostrar un error
             // Para el propósito del portfolio, asumimos que siempre debería existir una
             // y si no, se crea una en blanco para rellenar.
             model.addAttribute("personalInfoDto", new PersonalInfoDto());
             redirectAttributes.addFlashAttribute("error", "No se encontró información personal. Por favor, crea una nueva.");
-            return "personalinfo/form-personal-info"; // O redirigir a un formulario de creación explícito
+            return "personal-info/form-personal-info"; // O redirigir a un formulario de creación explícito
         }
     }
 
@@ -52,7 +52,7 @@ public class PersonalInfoController {
                                    BindingResult result,
                                    RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
-            return "personalinfo/form-personal-info";
+            return "personal-info/form-personal-info";
         }
 
         try {
@@ -64,7 +64,7 @@ public class PersonalInfoController {
             redirectAttributes.addFlashAttribute("error", "Error al guardar la información personal: " + e.getMessage());
             // Si hubo un error, volvemos al formulario para que el usuario pueda corregir
             // Y mantenemos el DTO en el modelo para que los datos ingresados no se pierdan.
-            return "personalinfo/form-personal-info";
+            return "personal-info/form-personal-info";
         }
     }
 
@@ -72,7 +72,7 @@ public class PersonalInfoController {
     @GetMapping("/create")
     public String showCreateForm(Model model) {
         model.addAttribute("personalInfoDto", new PersonalInfoDto());
-        return "personalinfo/form-personal-info";
+        return "personal-info/form-personal-info";
     }
 
     // Y el método save manejará tanto la creación (id == null) como la actualización (id != null).

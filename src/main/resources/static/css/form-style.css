@@ -21,7 +21,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -29,4 +29,7 @@
     background-color: var(--color-primary-gold); /* Usando tu variable de amarillo al pasar el ratón */
     color: var(--color-dark); /* Color de texto oscuro para contraste con el amarillo */
     transform: translateY(-2px); /* Un pequeño levantamiento para el efecto hover */
+}
+.admin-section h2{
+    color: var(--color-primary-gold);
 }

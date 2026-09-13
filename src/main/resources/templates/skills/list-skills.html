@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style-list.css">
-    <link rel="stylesheet" href="/css/form-style.css">
-    <link rel="stylesheet" href="/css/style-form-project.css">
 </head>
 <body>
 
 <header>
     <div class="container">
-        <div th:insert="~{fragments/nav :: nav}"></div>
+        <div th:insert="~{fragments/nav-admin :: nav-admin}" ></div>
     </div>
 </header>
 
@@ -34,7 +32,7 @@
                 <p th:text="${error}"></p>
             </div>
 
-            <table class="data-table">
+            <table class="admin-table">
                 <thead>
                 <tr>
                     <th>ID</th>

@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import portfolio.dto.ExperienceDto;
-import portfolio.dto.ExperienceMapper;
+import portfolio.mapper.ExperienceMapper;
 import portfolio.model.Experience;
 import portfolio.service.IExperienceService;
 
